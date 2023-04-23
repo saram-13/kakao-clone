@@ -32,7 +32,8 @@
   flex-direction: column;
 }
 
-.login-form input[type="text"] {
+.login-form input {
+  /* .login-form input[type="text"] 등으로 더 정확히 가리킬 수도 있다. */
   padding: 16px 0px;
   border: none;
   font-size: 16px;
