@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>More - Kakao Clone</title>
+    <script
+      src="https://kit.fontawesome.com/f136d54098.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body class="invisible-scroll-bar">
+    <div class="status-bar">
+      <div class="status-bar__column">
+        <span>No Service</span>
+        <i class="fa-solid fa-wifi"></i>
+      </div>
+      <div class="status-bar__column">
+        <span>18:43</span>
+      </div>
+      <div class="status-bar__column">
+        <span>98%</span>
+        <i class="fa-solid fa-battery-full"></i>
+        <i class="fa-solid fa-bolt"></i>
+      </div>
+    </div>
+
+    <header class="screen-header">
+      <h1 class="screen-header__title">More</h1>
+      <div class="screen-header__icons">
+        <a href="#" class="screen-header__icon">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </a>
+        <a href="#" class="screen-header__icon">
+          <i class="fa-solid fa-music"></i>
+        </a>
+        <a href="settings.html" class="screen-header__icon">
+          <i class="fa-solid fa-gear"></i>
+          <div class="notification screen-header__notification--small"></div>
+        </a>
+      </div>
+    </header>
+
+    <main class="main">
+      <div
+        class="user-component user-component--big user-component--default-cursor"
+      >
+        <div class="user-component__column">
+          <img class="user-component__photo" src="images\profile-photo.jpg" />
+          <div class="user-component__text">
+            <span class="user-component__name"> Saram13 </span>
+            <span class="user-component__info">
+              +1 526-556-9871
+              <i class="fa-solid fa-circle-exclamation"></i>
+            </span>
+          </div>
+        </div>
+        <div class="user-component__column">
+          <i class="fa-regular fa-message"></i>
+        </div>
+      </div>
+
+      <div class="icons">
+        <div class="icons__icon">
+          <i class="fa-regular fa-calendar-check"></i>
+          <span class="icons__text icons__text--small">Calendar</span>
+        </div>
+        <div class="icons__icon">
+          <i class="fa-solid fa-box-archive"></i>
+          <span class="icons__text icons__text--small"> Talk Drive </span>
+          <div class="notification icon__notification--small"></div>
+        </div>
+        <div class="icons__icon">
+          <i class="fa-regular fa-face-smile-wink"></i>
+          <span class="icons__text icons__text--small"> Emoticons </span>
+        </div>
+        <div class="icons__icon">
+          <i class="fa-solid fa-brush"></i>
+          <span class="icons__text icons__text--small">Themes</span>
+        </div>
+      </div>
+
+      <div class="icons icons--boder-bottom">
+        <div class="icons__icon">
+          <i class="fa-regular fa-address-card"></i>
+          <span class="icons__text icons__text--small">Account</span>
+        </div>
+        <div class="icons__icon">
+          <i class="fa-regular fa-comments"></i>
+          <span class="icons__text icons__text--small"> Openchat </span>
+        </div>
+        <div class="icons__icon icons__icon--invisible">
+          <i class="fa-solid fa-fingerprint"></i>
+          <span class="icons__text icons__text--small">invisible</span>
+        </div>
+        <div class="icons__icon icons__icon--invisible">
+          <i class="fa-regular fa-envelope"></i>
+          <span class="icons__text icons__text--small">invisible</span>
+        </div>
+      </div>
+
+      <div class="suggestions">
+        <div class="suggestions__header">Suggestions</div>
+
+        <div class="icons">
+          <div class="icons__icon">
+            <img src="images\dawae-standing.jpg" />
+            <span class="icons__text icons__text--suggestion">Dawae</span>
+          </div>
+          <div class="icons__icon">
+            <img src="images\hampter.jpg" />
+            <span class="icons__text icons__text--suggestion">
+              Hampter Story
+            </span>
+          </div>
+          <div class="icons__icon">
+            <img src="images\bepis.jpg" />
+            <span class="icons__text icons__text--suggestion"> Bepis Bro </span>
+          </div>
+          <div class="icons__icon icons__icon--invisible">
+            <img src="images\bepis.jpg" />
+            <span class="icons__text icons__text--suggestion">invisible</span>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__btn">
+          <a class="nav__anchor" href="friends.html">
+            <i class="fa-regular fa-user"></i>
+          </a>
+        </li>
+        <li class="nav__btn">
+          <a class="nav__anchor" href="chats.html">
+            <i class="fa-regular fa-comment"></i>
+            <div class="notification nav__notification--big">3</div>
+          </a>
+          <!-- 알림 숫자도 하나의 anchor로 작동되기 원해서 a의 안쪽으로 넣었다. -->
+        </li>
+        <li class="nav__btn">
+          <a class="nav__anchor" href="find.html">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </a>
+        </li>
+        <li class="nav__btn">
+          <a class="nav__anchor" href="more.html">
+            <i class="fa-solid fa-ellipsis"></i>
+            <div class="notification nav__notification--small"></div>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <div id="too-big-screen">This screen is too big</div>
+    <div id="too-small-screen">This screen is too small</div>
+  </body>
+</html>

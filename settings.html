@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Settings - Kakao Clone</title>
+    <script
+      src="https://kit.fontawesome.com/f136d54098.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body class="invisible-scroll-bar">
+    <div class="status-bar">
+      <div class="status-bar__column">
+        <span>No Service</span>
+        <i class="fa-solid fa-wifi"></i>
+      </div>
+      <div class="status-bar__column">
+        <span>18:43</span>
+      </div>
+      <div class="status-bar__column">
+        <span>98%</span>
+        <i class="fa-solid fa-battery-full"></i>
+        <i class="fa-solid fa-bolt"></i>
+      </div>
+    </div>
+
+    <header class="alt-screen-header">
+      <div class="alt-screen-header__column">
+        <a href="javascript:history.back()">
+          <!-- 아직 배운 것은 아니지만 이전 페이지로 돌아가는 기능이다. -->
+          <i class="fa-solid fa-chevron-left"></i>
+        </a>
+      </div>
+      <div class="alt-screen-header__column">Settings</div>
+      <div class="alt-screen-header__column">
+        <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+      </div>
+    </header>
+
+    <main class="main">
+      <li class="settings__list">
+        <div class="settings__column">
+          <i class="fa-solid fa-bullhorn"></i>
+          <span class="settings__title">Notices</span>
+        </div>
+      </li>
+      <li class="settings__list">
+        <div class="settings__column">
+          <i class="fa-solid fa-flask"></i>
+          <span class="settings__title">Kakao Clone Lab</span>
+        </div>
+      </li>
+      <li class="settings__list settings__list--no-border">
+        <div class="settings__column">
+          <i class="fa-solid fa-circle-info"></i>
+          <span class="settings__title">Version</span>
+        </div>
+        <div class="settings__column">
+          <span class="settings__info">Lastest Version</span>
+        </div>
+      </li>
+    </main>
+
+    <div class="settings__divider"></div>
+
+    <main class="main">
+      <li class="settings__list">
+        <div class="settings__column">
+          <i class="fa-solid fa-lock"></i>
+          <span class="settings__title">Privacy</span>
+        </div>
+      </li>
+      <li class="settings__list">
+        <div class="settings__column">
+          <i class="fa-solid fa-bell"></i>
+          <span class="settings__title">Notifications</span>
+        </div>
+      </li>
+      <li class="settings__list">
+        <div class="settings__column">
+          <i class="fa-solid fa-user"></i>
+          <span class="settings__title">Friends</span>
+        </div>
+      </li>
+      <li class="settings__list">
+        <div class="settings__column">
+          <i class="fa-solid fa-comment"></i>
+          <span class="settings__title">Chats</span>
+        </div>
+      </li>
+      <li class="settings__list">
+        <div class="settings__column">
+          <i class="fa-solid fa-circle-half-stroke"></i>
+          <span class="settings__title">Display</span>
+          <div class="notification settings__notification">N</div>
+        </div>
+      </li>
+      <li class="settings__list">
+        <div class="settings__column">
+          <i class="fa-solid fa-brush"></i>
+          <span class="settings__title">Themes</span>
+          <div class="notification settings__notification">N</div>
+        </div>
+        <div class="settings__column">
+          <span class="settings__info">Default theme</span>
+        </div>
+      </li>
+      <li class="settings__list settings__list--no-border">
+        <div class="settings__column">
+          <i class="fa-solid fa-phone"></i>
+          <span class="settings__title">Call</span>
+        </div>
+      </li>
+    </main>
+
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__btn">
+          <a class="nav__anchor" href="friends.html">
+            <i class="fa-regular fa-user"></i>
+          </a>
+        </li>
+        <li class="nav__btn">
+          <a class="nav__anchor" href="chats.html">
+            <i class="fa-regular fa-comment"></i>
+            <div class="notification nav__notification--big">3</div>
+          </a>
+        </li>
+        <li class="nav__btn">
+          <a class="nav__anchor" href="find.html">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </a>
+        </li>
+        <li class="nav__btn">
+          <a class="nav__anchor" href="more.html">
+            <i class="fa-solid fa-ellipsis"></i>
+            <div class="notification nav__notification--small"></div>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <div id="too-big-screen">This screen is too big</div>
+    <div id="too-small-screen">This screen is too small</div>
+  </body>
+</html>

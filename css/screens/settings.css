@@ -1,0 +1,33 @@
+.settings__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  padding: 20px 0px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.settings__column {
+  display: flex;
+  align-items: center;
+}
+
+.settings__column i {
+  padding-top: 2px;
+  margin-right: 15px;
+}
+
+.settings__info {
+  opacity: 0.6;
+}
+
+.settings__list--no-border {
+  border: none;
+}
+
+.settings__divider {
+  height: 0;
+  margin: 15px 0px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}

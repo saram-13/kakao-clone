@@ -1,0 +1,66 @@
+/* html의 head에 css를 작성해도 되지만 그보다 css파일을 따로 작성하여 link하는 방식이 더 깔끔하다. */
+/* 후에 수정하기도 쉽고 찾기도 쉽고 읽기도 좋다. */
+
+/* etc */
+/* 위에 두지 않으면 밑에 있는 것들이 작동하지 않을 수도 있다. 라고 배웠지만 밑에 둬도 작동 하긴 한다. 뭘까? */
+@import "reset.css";
+@import "variables.css";
+
+/* components */
+@import "components/status-bar.css";
+@import "components/nav-bar.css";
+@import "components/notifications.css";
+@import "components/screen-header.css";
+@import "components/user-components.css";
+@import "components/icons.css";
+@import "components/alt-screen-header.css";
+@import "components/screen-size.css";
+
+/* screens */
+@import "screens/index.css";
+@import "screens/friends.css";
+@import "screens/find.css";
+@import "screens/more.css";
+@import "screens/settings.css";
+@import "screens/chat.css";
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  /* 글씨체를 선택한다. */
+  /* font-family를 사용하지 않고 Google Font에서 import하면 좀 더 다양한 글씨체를 사용할 수 있다. */
+  color: #0c0c0c;
+  height: 100%;
+  /* body에 height 100%를 적용하면 내부 컨텐츠에 따라 크기가 달라지기 때문에 컨텐츠가 화면을 넘겨도 스크롤해서 볼 수 있게된다. */
+  padding-bottom: 50.8px;
+  padding-top: 90px;
+  /* navigation-bar, status-bar, screen-header에 컨텐츠가 가려지지 않게 하기 위해 상하 padding을 추가했다. */
+}
+
+.main {
+  padding: 0px 20px;
+}
+/* 스크린샷을 보면 거의 메인 컨텐츠에 좌우 간격이 있다. 그러나 예외도 있기 때문에 body에 padding을 적용하지는 않았다. */
+/* 예외들만 absolute를 적용해줄 수 있으나 그러면 불편하기도 하고 디자인이 깔끔하게 떨어지지 않는다. */
+
+input:focus {
+  outline: none;
+}
+/* focus했을 때 못생긴 boder가 생기는게 싫어서 적용했다. */
+
+img {
+  cursor: pointer;
+}
+/* 이미지는 보통 무조건 클릭할 수 있기 때문에 설정했다. */
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+/* anchor는 기본적으로 글자 아래에 밑줄을 가지고 있고 파란색이다. 보기 안좋기 때문에 수정한다. */
+/* inherit은 부모로부터 특성을 물려받는다는 뜻이다. 부모가 특성을 가진게 없으면 그 위로 올라가는 것을 반복하다가 결국 제일 상위인 body로부터 물려받는다. */
+
+.invisible-scroll-bar::-webkit-scrollbar {
+  display: none;
+}
+/* 스크롤바를 없애주는 기능이다. 스크롤바가 공간을 차지하면서 콘텐츠가 줄어드는 것이 보기 싫어서 적용했다. */

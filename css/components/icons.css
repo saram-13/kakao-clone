@@ -1,0 +1,77 @@
+/* find-icon */
+.icons {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icons__icon {
+  position: relative;
+  /* more에서 icon에 notification을 넣어줘야 한다 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 80px;
+  height: 80px;
+}
+
+.icons__icon i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  /* 부모(icons__icon)의 너비가 80px인데 거기에 100%를 채우라는 의미 */
+  height: 60%;
+  /* 부모(icons__icon)의 높이가 80px인데 거기에 60% 채우라는 의미 */
+  margin-bottom: 3px;
+  font-size: 30px;
+  /* 아이콘과 span을 block화 해서 마치 각기 다른 div에 속해있는 것 처럼 보이나 실제로는 하나에 묶여있는 형태로 만들었다. */
+}
+
+.icons__text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  /* 부모(icons__icon)의 너비가 80px인데 거기에 100%를 채우라는 의미 */
+  height: 40%;
+  /* 부모(icons__icon)의 높이가 80px인데 거기에 60% 채우라는 의미 */
+  line-height: 20px;
+  font-size: 14px;
+  /* 글자의 행간 간격 설정 */
+  /* 아이콘과 span을 block화 해서 마치 각기 다른 div에 속해있는 것 처럼 보이나 실제로는 하나에 묶여있는 형태로 만들었다. */
+}
+
+.icons__text--small {
+  font-size: 12px;
+  opacity: 0.85;
+  margin-bottom: 15px;
+}
+
+.icons--boder-bottom {
+  padding-bottom: 25px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.icons__icon--invisible {
+  visibility: hidden;
+  /* 여기서 display: none을 해보면 visibility: hidden과의 차이를 알 수 있다. */
+}
+
+/* more__suggestions */
+.icons__icon img {
+  width: 45px;
+  height: 45px;
+  border-radius: 5px;
+}
+
+.icons__text--suggestion {
+  font-size: 12px;
+  opacity: 0.9;
+  margin-bottom: 10px;
+  line-height: 12px;
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chats - Kakao Clone</title>
+    <script
+      src="https://kit.fontawesome.com/f136d54098.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="invisible-scroll-bar">
+    <div class="status-bar">
+      <div class="status-bar__column">
+        <span>No Service</span>
+        <i class="fa-solid fa-wifi"></i>
+      </div>
+      <div class="status-bar__column">
+        <span>18:43</span>
+      </div>
+      <div class="status-bar__column">
+        <span>98%</span>
+        <i class="fa-solid fa-battery-full"></i>
+        <i class="fa-solid fa-bolt"></i>
+      </div>
+    </div>
+
+    <header class="screen-header">
+      <h1 class="screen-header__title">Chats</h1>
+      <div class="screen-header__icons">
+        <a href="#" class="screen-header__icon">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </a>
+        <a href="#" class="screen-header__icon">
+          <i class="fa-regular fa-comment"></i>
+          <i class="fa-solid fa-plus"></i>
+        </a>
+        <a href="#" class="screen-header__icon">
+          <i class="fa-solid fa-music"></i>
+        </a>
+        <a href="settings.html" class="screen-header__icon">
+          <i class="fa-solid fa-gear"></i>
+        </a>
+      </div>
+    </header>
+
+    <main class="main">
+      <a href="chat-kakao-clone.html">
+        <div class="user-component user-component--big">
+          <div class="user-component__column">
+            <img
+              class="user-component__photo user-component__photo--big"
+              src="images\kakao-logo.jpg"
+            />
+            <div class="user-component__text">
+              <span class="user-component__name user-component__name--big">
+                Kakao Clone
+              </span>
+              <span class="user-component__info">
+                Please check My Kakao Account Info
+              </span>
+            </div>
+          </div>
+          <div class="user-component__column user-component__column--big">
+            <span class="user-component__time">21:22</span>
+            <div class="notification chats__notification">1</div>
+          </div>
+        </div>
+      </a>
+
+      <a href="chat-john.html">
+        <div class="user-component user-component--big">
+          <div class="user-component__column">
+            <img
+              class="user-component__photo user-component__photo--big"
+              src="images\john.jpg"
+            />
+            <div class="user-component__text">
+              <span class="user-component__name user-component__name--big">
+                John
+              </span>
+              <span class="user-component__info">What?</span>
+            </div>
+          </div>
+          <div class="user-component__column user-component__column--big">
+            <span class="user-component__time">19:52</span>
+            <div class="notification notification--invisible"></div>
+          </div>
+        </div>
+      </a>
+
+      <a href="chat-peter.html">
+        <div class="user-component user-component--big">
+          <div class="user-component__column">
+            <img
+              class="user-component__photo user-component__photo--big"
+              src="images\bully-maguire.jpg"
+            />
+            <div class="user-component__text">
+              <span class="user-component__name user-component__name--big">
+                Peter
+              </span>
+              <span class="user-component__info">
+                Wanna put some dirt in your eyes
+              </span>
+            </div>
+          </div>
+          <div class="user-component__column user-component__column--big">
+            <span class="user-component__time">Yesterday</span>
+            <div class="notification chats__notification">2</div>
+          </div>
+        </div>
+      </a>
+    </main>
+
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__btn">
+          <a class="nav__anchor" href="friends.html">
+            <i class="fa-regular fa-user"></i>
+          </a>
+        </li>
+        <li class="nav__btn">
+          <a class="nav__anchor" href="chats.html">
+            <i class="fa-solid fa-comment"></i>
+            <div class="notification nav__notification--big">3</div>
+          </a>
+        </li>
+        <li class="nav__btn">
+          <a class="nav__anchor" href="find.html">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </a>
+        </li>
+        <li class="nav__btn">
+          <a class="nav__anchor" href="more.html">
+            <i class="fa-solid fa-ellipsis"></i>
+            <div class="notification nav__notification--small"></div>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <div id="too-big-screen">This screen is too big</div>
+    <div id="too-small-screen">This screen is too small</div>
+  </body>
+</html>

@@ -1,0 +1,245 @@
+#chat-body {
+  background-color: #abc1d1;
+}
+
+.main--chat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Animista에서 가져옴 */
+@keyframes scale-in-center {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.chat__timestamp {
+  will-change: transform;
+  background-color: #92a4b3;
+  border-radius: 20px;
+  padding: 7px 12px;
+  color: #edf1f3;
+  font-size: 12px;
+  margin-bottom: 15px;
+  cursor: default;
+  animation: scale-in-center 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+/* Animista에서 가져옴 */
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.message-row {
+  will-change: transform;
+  display: flex;
+  margin-bottom: 10px;
+  width: 100%;
+  animation: slide-in-left 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.message-row > img {
+  width: 40px;
+  height: 40px;
+  border-radius: 35%;
+  cursor: pointer;
+}
+
+.message__text {
+  display: flex;
+  flex-direction: column;
+}
+
+.message__name {
+  color: #535c63;
+  font-size: 14px;
+  margin-top: 2px;
+  margin-left: 8px;
+  cursor: default;
+}
+
+.message__info {
+  display: flex;
+  align-items: flex-end;
+  cursor: default;
+  width: 100%;
+}
+
+.message__info img {
+  margin-left: 8px;
+  margin-top: 6px;
+  width: 200px;
+  height: 200px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.message__time {
+  margin-left: 8px;
+  color: #535c63;
+  font-size: 11px;
+}
+
+.message__content {
+  background-color: white;
+  border-radius: 15px;
+  border-top-left-radius: 0px;
+  /* 특정 모서리를 수정하는 방법 */
+  padding: 8px 14px;
+  margin-left: 8px;
+  margin-top: 6px;
+  font-size: 17px;
+  word-break: break-all;
+  /* 문단 줄나눔 기준을 설정하는 것이다. 
+  한글은 애초에 한글자 단위로 나누어지지만 영어는 단어 단위로 나뉘어져서 보기 안좋다. 
+  그래서 영어도 글자 단위로 나뉘어 지도록 설정한 것이다 */
+  text-align: justify;
+  /* justify는 양측에 맞춰서 정렬하는 속성이다 */
+  line-height: 22px;
+}
+
+/* Animista에서 가져옴 */
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.message-row--reverse {
+  will-change: transform;
+  justify-content: flex-end;
+  animation: slide-in-right 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.message__info--reverse {
+  flex-direction: row-reverse;
+}
+/* flex children의 경우 이렇게 정렬할 수도 있다.
+.message__time {
+  order: 0;
+}
+.message__content {
+  order: 1;
+} */
+
+.message__content--reverse {
+  border-radius: 15px;
+  border-top-right-radius: 0px;
+  margin-top: 5px;
+  background-color: var(--yellow);
+}
+
+.reply {
+  position: fixed;
+  bottom: 0;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  background-color: white;
+  padding: 5px 20px;
+}
+
+.reply__column {
+  height: 100%;
+}
+
+.reply__column .fa-square-plus {
+  cursor: pointer;
+  margin-right: 20px;
+  font-size: 26px;
+  opacity: 0.5;
+}
+
+.reply__column:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reply__column:last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.reply input {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 0px 10px;
+}
+
+.reply__column:last-child .fa-face-smile {
+  position: absolute;
+  right: 55px;
+  font-size: 24px;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.reply__column:last-child .fa-hashtag {
+  position: absolute;
+  right: 15px;
+  font-size: 24px;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.reply__column:last-child button {
+  position: absolute;
+  border: 0.5px solid #f0e598;
+  border-radius: 50%;
+  right: 2px;
+  font-size: 20px;
+  width: 38px;
+  height: 38px;
+  background-color: var(--yellow);
+  /* 애니메이션 */
+  visibility: hidden;
+  /* opacity가 0이고 화면 밖으로 이동시켜놨다면 상관 없지만 혹시 모를 상황에서 마우스로 클릭이 될까봐 hidden으로 설정해놨다. */
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 0.2s ease-in-out;
+}
+
+/* 애니메이션 */
+.reply:focus-within button {
+  visibility: visible;
+  cursor: pointer;
+  transform: none;
+  opacity: 1;
+}
+/* focus-within은 내부 요소 중 아무거나 focus된 것이 있을 때 라는 뜻이다. */
+
+/* 애니메이션 */
+.reply:focus-within .fa-face-smile,
+.reply:focus-within .fa-hashtag {
+  transform: translateX(-35px);
+}

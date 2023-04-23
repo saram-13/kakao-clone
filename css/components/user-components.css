@@ -1,0 +1,104 @@
+.user-component {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.user-component--default-cursor {
+  cursor: default;
+}
+
+.user-component__column:first-child {
+  display: flex;
+  align-items: center;
+}
+
+.user-component__photo {
+  width: 60px;
+  height: 60px;
+  border-radius: 40%;
+  margin-right: 12px;
+}
+
+.user-component__name {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.user-component__text {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-component__info {
+  margin-top: 7px;
+  font-size: 14px;
+  opacity: 0.5;
+}
+
+.user-component__info i {
+  margin-left: 0px;
+  color: #ff7667;
+  opacity: 1;
+  cursor: pointer;
+}
+
+/* user-component--small */
+.user-component__photo--small {
+  width: 45px;
+  height: 45px;
+  border-radius: 40%;
+  margin-right: 12px;
+}
+
+.user-component__name--small {
+  font-size: 18px;
+  font-weight: 400;
+  /* 400이 기본값이다 */
+}
+
+.user-component__column--small {
+  font-size: 13px;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+/* user-component--big */
+.user-component--big {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.user-component__photo--big {
+  width: 50px;
+  height: 50px;
+  border-radius: 40%;
+  margin-right: 12px;
+}
+
+.user-component__name--big {
+  font-size: 18px;
+  font-weight: 600;
+  /* 400이 기본값이다 */
+}
+
+.user-component__time {
+  font-size: 13px;
+  opacity: 0.5;
+  margin-bottom: 6px;
+}
+
+.user-component__column--big {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.user-component__column:last-child .fa-message {
+  font-size: 27px;
+  cursor: pointer;
+}

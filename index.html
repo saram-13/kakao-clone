@@ -1,10 +1,90 @@
+<!-- HTML과 Prettier이 선택돼 있는지 확인 후 "!" 를 치면 HTML의 초기 형태가 만들어진다. -->
+<!-- 모든 브라우저는 index파일을 가장 먼저 찾도록 되어있다. index는 영어로 첫번째라는 뜻이다. -->
+<!-- css나 html에서 모르는게 생기면 구글에 그걸 검색한 뒤 mdn을 붙인다. -->
 <!DOCTYPE html>
+<!-- 파일의 형태가 HTML임을 선언한다 -->
 <html lang="en">
+  <!-- 주로 쓰이는 언어가 무엇인지 선언한다. -->
   <head>
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- "link:css"이 단축키다 -->
+    <!-- css 파일을 외부에서 끌어오고 싶을 때 사용한다. -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Welcome to Kakao Clone</title>
+    <!-- 브라우저 상단 탭에 노출되는 이름을 설정한다 -->
+    <script
+      src="https://kit.fontawesome.com/f136d54098.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Font Awesome이라는 사이트의 아이콘을 사용하기 위해 사용하는 자바스크립트다. -->
   </head>
-  <body></body>
+
+  <body class="invisible-scroll-bar">
+    <div class="status-bar">
+      <div class="status-bar__column">
+        <span>No Service</span>
+        <i class="fa-solid fa-wifi"></i>
+        <!-- Font Awesome에서 fa-xs등의 클래스를 넣어서 크기를 조정할 수 있도록 해놨는데 css에서 font-size로 크기를 조정할 수도 있다. -->
+      </div>
+      <div class="status-bar__column">
+        <span>18:43</span>
+      </div>
+      <div class="status-bar__column">
+        <span>98%</span>
+        <i class="fa-solid fa-battery-full"></i>
+        <i class="fa-solid fa-bolt"></i>
+      </div>
+    </div>
+
+    <main class="main">
+      <!-- 스크린샷을 보면 화면에 일관된 좌우 공간이 존재한다. 이를 위해 body내부를 main으로 포함하여 좌우 padding을 준다. -->
+      <!-- body 자체에 padding을 주지 않는 이유는 예외도 있기 때문임. -->
+      <header class="welcome-header">
+        <h1 class="welcome-header__title">Welcome to Kakao Clone</h1>
+        <p class="welcome-header__text">
+          If you have a Kakao Account,<br />
+          log in with your email or phone number.
+          <!-- br은 break의 약자로 줄바꿈을 할 때 사용한다 -->
+        </p>
+      </header>
+
+      <form class="login-form" action="friends.html" method="get">
+        <!-- action은 submit했을 때 도착지점, method는 submit된 내용을 처리하는 방법이다 -->
+        <!-- get 방식 : url에 submit된 내용이 그대로 노출되기 때문에 보안상 취약하여 id, 비밀번호, 결제내역 등을 submit할 때는 사용하지 않는다. 그러나 무료로 사용할 수 있는게 장점이다. -->
+        <!-- post방식 : 유료로 서버를 구입하여 백엔드로 할 수 있다. 보안상 더 뛰어나다. -->
+        <input
+          name="id"
+          class="login-form__id"
+          type="text"
+          placeholder="Email or phone number"
+          required
+        />
+        <!-- name은 submit 됐을 때 인식하는 이름(get은 url에 표시됨) -->
+        <!-- type은 input의 형식을 정한다. text, submit 등이 있다. -->
+        <!-- placeholder는 input 내부에 보이는 글자다. focus 후 글자를 입력하면 사라진다. -->
+        <!-- required는 submit할 때 input에 필수적으로 무언가가 적혀 있어야 한다는 뜻이다. -->
+        <input
+          name="password"
+          class="login-form__password"
+          type="text"
+          placeholder="Password"
+          required
+        />
+        <input class="login-form__btn" type="submit" value="Log In" />
+      </form>
+
+      <form class="sign-up-form" action="#" method="get">
+        <!-- login-form과 같이 묶으면 id,password를 submit하게되기 때문에 따로 만들었다. -->
+        <input class="sign-up-form__btn" type="submit" value="Sign Up" />
+      </form>
+
+      <a class="find-account" href="#">Find Kakao Account of Password</a>
+    </main>
+
+    <div id="too-big-screen">This screen is too big</div>
+    <div id="too-small-screen">This screen is too small</div>
+    <!-- 스크린의 너비가 너무 크거나 작으면 해당 화면이 등장한다 -->
+  </body>
 </html>

@@ -1,0 +1,177 @@
+/* recommended-friends */
+.recommended-friends {
+  padding-top: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.recommended-friends__title {
+  opacity: 0.7;
+  font-size: 15px;
+}
+
+.recommended-friends__text {
+  padding-top: 90px;
+  padding-bottom: 90px;
+  text-align: center;
+  opacity: 0.65;
+  font-size: 16px;
+}
+
+/* open-chat__header */
+.open-chat__header {
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 15px;
+}
+
+.open-chat__title {
+  opacity: 0.7;
+  font-size: 15px;
+}
+
+.open-chat__go-to-openchat {
+  opacity: 0.5;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.open-chat__header i {
+  opacity: 0.3;
+  font-size: 13px;
+}
+
+/* open-post */
+.open-post {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 15px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.open-post__column:first-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.open-post__title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.open-post__hashtags {
+  text-transform: uppercase;
+  /* 겉으로 드러나는 것이 대문자가 되도록 한다. 실제로는 소문자다. */
+  opacity: 0.5;
+  margin-bottom: 4px;
+}
+
+.open-post__members {
+  display: flex;
+  align-items: center;
+}
+
+.open-post__profile-photo {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.open-post__member-count {
+  /* .open-post__members span:nth-of-type(1) */
+  font-size: 16px;
+  opacity: 0.4;
+}
+
+.open-post__divider {
+  /* .open-post__members span:nth-of-type(2) */
+  font-size: 14px;
+  margin: 0px 5px;
+  opacity: 0.4;
+}
+
+.open-post__active {
+  /* .open-post__members span:nth-of-type(3) */
+  color: #ff88d0;
+  font-size: 14px;
+}
+
+.open-post__column:last-child {
+  position: relative;
+}
+
+.open-post__main-photo {
+  /* open-post__column > img */
+  width: 90px;
+  height: 90px;
+  border-radius: 5px;
+}
+
+.open-post__likes {
+  /* .open-post__column:last-child div */
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  font-size: 13px;
+  color: white;
+  border-radius: 10px;
+  padding: 5px 8px;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+}
+
+.open-post__likes i {
+  /* .open-post__column:last-child div i */
+  margin-top: 2px;
+  font-size: 11px;
+  margin-right: 4px;
+}
+
+/* Animista에서 가져옴 */
+@keyframes heartbeat {
+  from {
+    transform: scale(1);
+    transform-origin: center center;
+    animation-timing-function: ease-out;
+    color: white;
+  }
+  10% {
+    transform: scale(0.91);
+    animation-timing-function: ease-in;
+  }
+  17% {
+    transform: scale(0.98);
+    animation-timing-function: ease-out;
+    color: tomato;
+  }
+  33% {
+    transform: scale(0.87);
+    animation-timing-function: ease-in;
+  }
+  45% {
+    transform: scale(1);
+    animation-timing-function: ease-out;
+  }
+}
+
+.open-post__likes:hover i {
+  will-change: transform;
+  /* 브라우저에게 '이게 변할거야'라고 미리 알려주는 것. 컴퓨터는 GPU를 더 잘 사용하게 되어 애니메이션이 더 부드럽게 된다. */
+  animation: heartbeat 1s ease-in-out infinite both;
+}
+
+/* 처음에 헷갈린 것. span:nth-child(2)는 실제 형제의 순서와 맞아야 한다.
+즉 여러 span 중에서 2번째 형재를 찾으라는 의미가 아니라
+부모의 형제들 중에서 2번째에 있으며 span인 놈을 찾으라는 의미다. */
+/* 그러나 여러 span들 중에서 n번째를 찾고 싶으면 nth-of-type(n)을 써야 한다. */
+
+.open-post:last-child {
+  border: none;
+}

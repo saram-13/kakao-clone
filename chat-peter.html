@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat with Peter - Kakao Clone</title>
+    <script
+      src="https://kit.fontawesome.com/f136d54098.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body id="chat-body" class="invisible-scroll-bar">
+    <div class="status-bar status-bar--blue">
+      <div class="status-bar__column">
+        <span>No Service</span>
+        <i class="fa-solid fa-wifi"></i>
+      </div>
+      <div class="status-bar__column">
+        <span>18:43</span>
+      </div>
+      <div class="status-bar__column">
+        <span>98%</span>
+        <i class="fa-solid fa-battery-full"></i>
+        <i class="fa-solid fa-bolt"></i>
+      </div>
+    </div>
+
+    <header class="alt-screen-header alt-screen-header--blue">
+      <div class="alt-screen-header__column">
+        <a href="javascript:history.back()">
+          <!-- 아직 배운 것은 아니지만 이전 페이지로 돌아가는 기능이다. -->
+          <i class="fa-solid fa-chevron-left"></i>
+        </a>
+      </div>
+      <div class="alt-screen-header__column">Peter</div>
+      <div class="alt-screen-header__column">
+        <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+        <a href="#"><i class="fa-solid fa-bars"></i></a>
+      </div>
+    </header>
+
+    <main class="main main--chat">
+      <div class="chat__timestamp">Tuesday, June 29, 2020</div>
+
+      <div class="message-row">
+        <img src="images\bully-maguire.jpg" />
+        <div class="message__text">
+          <span class="message__name">Peter</span>
+          <div class="message__info">
+            <span class="message__content">Fix this damn door</span>
+            <span class="message__time">Yesterday</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="message-row">
+        <img src="images\bully-maguire.jpg" />
+        <div class="message__text">
+          <span class="message__name">Peter</span>
+          <div class="message__info">
+            <img src="images\broken-door.jpg" />
+            <span class="message__time">Yesterday</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="message-row message-row--reverse">
+        <div class="message__text">
+          <div class="message__info message__info--reverse">
+            <span class="message__content message__content--reverse">
+              No, I don't think I will
+            </span>
+            <span class="message__time">Yesterday</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="message-row">
+        <img src="images\bully-maguire.jpg" />
+        <div class="message__text">
+          <span class="message__name">Peter</span>
+          <div class="message__info">
+            <span class="message__content"> Look at little goblin junior </span>
+            <span class="message__time">Yesterday</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="message-row">
+        <img src="images\bully-maguire.jpg" />
+        <div class="message__text">
+          <span class="message__name">Peter</span>
+          <div class="message__info">
+            <span class="message__content">
+              Wanna put some dirt in your eye
+            </span>
+            <span class="message__time">Yesterday</span>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <form class="reply">
+      <div class="reply__column">
+        <i class="fa-regular fa-square-plus"></i>
+      </div>
+      <div class="reply__column">
+        <input type="text" placeholder="Write a message" />
+        <i class="fa-regular fa-face-smile"></i>
+        <i class="fa-solid fa-hashtag"></i>
+        <button>
+          <i class="fa-solid fa-arrow-up"></i>
+        </button>
+      </div>
+    </form>
+
+    <div id="too-big-screen">This screen is too big</div>
+    <div id="too-small-screen">This screen is too small</div>
+  </body>
+</html>

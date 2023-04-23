@@ -1,0 +1,7 @@
+/* css도 변수를 지정하여 사용할 수 있다. */
+
+:root {
+  --yellow: #fae100;
+  /* --border: 1px solid rgba(0, 0, 0, 0.2); */
+  /* border의 색깔이 전부 달라서 안쓰기로 했음 */
+}

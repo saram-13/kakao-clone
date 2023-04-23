@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find - Kakao Clone</title>
+    <script
+      src="https://kit.fontawesome.com/f136d54098.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body class="invisible-scroll-bar">
+    <div class="status-bar">
+      <div class="status-bar__column">
+        <span>No Service</span>
+        <i class="fa-solid fa-wifi"></i>
+      </div>
+      <div class="status-bar__column">
+        <span>18:43</span>
+      </div>
+      <div class="status-bar__column">
+        <span>98%</span>
+        <i class="fa-solid fa-battery-full"></i>
+        <i class="fa-solid fa-bolt"></i>
+      </div>
+    </div>
+
+    <header class="screen-header">
+      <h1 class="screen-header__title">Find</h1>
+      <div class="screen-header__icons">
+        <a href="#" class="screen-header__icon">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </a>
+        <a href="settings.html" class="screen-header__icon">
+          <i class="fa-solid fa-gear"></i>
+          <div class="notification screen-header__notification--small"></div>
+        </a>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="icons icons--boder-bottom">
+        <!-- 단축키 : div.find-icons__icon*4>span+i -->
+        <div class="icons__icon">
+          <i class="fa-solid fa-qrcode"></i>
+          <span class="icons__text">QR Code</span>
+        </div>
+        <div class="icons__icon">
+          <i class="fa-regular fa-address-book"></i>
+          <span class="icons__text">Add by<br />Contacts</span>
+        </div>
+        <div class="icons__icon">
+          <i class="fa-solid fa-fingerprint"></i>
+          <span class="icons__text">Add by ID</span>
+        </div>
+        <div class="icons__icon">
+          <i class="fa-regular fa-envelope"></i>
+          <span class="icons__text">Invite</span>
+        </div>
+      </div>
+
+      <div class="recommended-friends">
+        <div class="recommended-friends__title">Recommended Friends</div>
+        <div class="recommended-friends__text">
+          You have no recommended friends.
+        </div>
+      </div>
+
+      <div class="open-chat">
+        <div class="open-chat__header">
+          <span class="open-chat__title">Open Chat</span>
+          <span class="open-chat__go-to-openchat">
+            Go to Openchat Home
+            <i class="fa-solid fa-chevron-right"></i>
+          </span>
+        </div>
+
+        <div class="open-post">
+          <div class="open-post__column">
+            <div class="open-post__title">#BTS</div>
+            <div class="open-post__hashtags">#bts#army#friends</div>
+            <div class="open-post__members">
+              <img
+                class="open-post__profile-photo"
+                src="images\anime-girl.jpg"
+              />
+              <span class="open-post__member-count">802 members</span>
+              <span class="open-post__divider">|</span>
+              <span class="open-post__active">Active</span>
+            </div>
+          </div>
+          <div class="open-post__column">
+            <img class="open-post__main-photo" src="images\bts.jpeg" />
+            <div class="open-post__likes">
+              <i class="fa-solid fa-heart"></i>
+              <span>326</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="open-post">
+          <div class="open-post__column">
+            <div class="open-post__title">#PEPE</div>
+            <div class="open-post__hashtags">#pepe#frog#bros</div>
+            <div class="open-post__members">
+              <img
+                class="open-post__profile-photo"
+                src="images\white-guy.jpg"
+              />
+              <span class="open-post__member-count">250 members</span>
+              <span class="open-post__divider">|</span>
+              <span class="open-post__active">Active</span>
+            </div>
+          </div>
+          <div class="open-post__column">
+            <img class="open-post__main-photo" src="images\happy-pepe.jpeg" />
+            <div class="open-post__likes">
+              <i class="fa-solid fa-heart"></i>
+              <span>713</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__btn">
+          <a class="nav__anchor" href="friends.html">
+            <i class="fa-regular fa-user"></i>
+          </a>
+        </li>
+        <li class="nav__btn">
+          <a class="nav__anchor" href="chats.html">
+            <i class="fa-regular fa-comment"></i>
+            <div class="notification nav__notification--big">3</div>
+          </a>
+        </li>
+        <li class="nav__btn">
+          <a class="nav__anchor" href="find.html">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </a>
+        </li>
+        <li class="nav__btn">
+          <a class="nav__anchor" href="more.html">
+            <i class="fa-solid fa-ellipsis"></i>
+            <div class="notification nav__notification--small"></div>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <div id="too-big-screen">This screen is too big</div>
+    <div id="too-small-screen">This screen is too small</div>
+  </body>
+</html>

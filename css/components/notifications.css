@@ -1,0 +1,87 @@
+.notification {
+  background-color: #ff612a;
+  border-radius: 50%;
+  color: white;
+}
+
+/* nav-bar */
+@keyframes NavNotification {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: translateY(-0.5px);
+    /* Y축으로 이동 */
+  }
+  100% {
+    transform: none;
+  }
+}
+
+.nav__notification--big {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  width: 20px;
+  height: 20px;
+  top: -10px;
+  left: 18px;
+  animation: NavNotification 1s ease-in-out infinite;
+  animation-delay: 0.5s;
+  /* 바로 시작하면 페이지 이동할 떄 잠깐 멈칫할 때 얘 혼자만 움직여서 부자연스러워보임 */
+}
+
+.nav__notification--small {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  top: -4px;
+  left: 22px;
+}
+
+/* chats */
+.chats__notification {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  width: 20px;
+  height: 20px;
+}
+
+.notification--invisible {
+  visibility: hidden;
+}
+
+/* screen-header */
+.screen-header__notification--small {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  top: 0px;
+  left: 22px;
+}
+
+/* icon */
+.icon__notification--small {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  top: 0px;
+  right: 16px;
+}
+
+/* settings */
+.settings__notification {
+  width: 12px;
+  height: 12px;
+  padding: 2px;
+  font-size: 1px;
+  font-weight: 600;
+  margin-left: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
