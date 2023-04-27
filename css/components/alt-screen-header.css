@@ -32,7 +32,7 @@
   background-color: #abc1d1;
 }
 
-.alt-screen-header__column:last-child .fa-bars {
+.alt-screen-header__column:last-child a:last-child {
   margin-left: 20px;
   font-size: 22px;
 }
