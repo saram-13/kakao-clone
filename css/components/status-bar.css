@@ -1,14 +1,9 @@
 .status-bar {
   position: fixed;
-  /* fixed : 자리에 고정시킴. top,right,left,bottom을 통해 부모의 상대적인 위치로 조정가능함. 기본적으로 기존의 layer에서 공간을 차지하지 않는다. */
-  /* sticky : 자리에 고정시킴. 기존의 layer에서 공간을 차지한다. 스크롤하다가 sicky끼리 밀어내도록 설정할 수도 있다. */
   top: 0;
   width: 100%;
   box-sizing: border-box;
-  /* padding을 주게되면 브라우저는 기존 box의 크기를 늘린다. 즉 기존 박스 안에서 padding을 만드는게 아니라 전체 박스의 크기를 늘려서 padding을 준다.
-  그렇게 하지 말고 기존 박스의 크기를 유지하라고 명령하는 것이 box-sizing: border-box이다. */
   z-index: 5;
-  /* 화면상 z축의 layer층을 의미한다. layer가 높으면 다른 컨텐츠들의 위로 올라간다. */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,8 +17,6 @@
   display: flex;
   align-items: center;
   width: 33.33%;
-  /* 각 3개의 column들이 33.33%씩 차지하게 만들어서 칸을 정확히 1/3씩 나눠 먹도록 한다 */
-  /* %는 부모의 크기 기준으로 비율을 맞춘다. 측 status-bar__column은 status-bar를 기준으로 크기를 맞추는 것이다. */
 }
 
 .status-bar__column:nth-child(2) {
@@ -34,7 +27,6 @@
   justify-content: flex-end;
 }
 
-/* 아이콘들의 font-size를 직접 조정하는게 세밀한 조정이 가능하고 box의 크기를 쉽게 측정할 수 있어서 편리하다. */
 .status-bar__column .fa-wifi {
   font-size: 12px;
   margin-left: 6px;
@@ -49,7 +41,7 @@
   font-size: 10px;
 }
 
-/* chat-screen에서 사용하는 class */
+/* chat-screen */
 .status-bar--blue {
   background-color: #abc1d1;
 }

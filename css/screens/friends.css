@@ -53,19 +53,14 @@
   cursor: pointer;
 }
 
-/* 로딩(하는것 처럼 보이는)화면 */
-/* Animista라는 사이트에 가면 더 많은 애니메이션을 쓸 수 있다. */
+/* splashscreen */
 @keyframes HideSplashScreen {
   from {
     opacity: 1;
   }
   to {
     opacity: 0;
-    /* display: none; */
-    /* 보이지는 않지만 여전히 있다. 때문에 낮은 layer에 있는 것을 클릭할 수 없다. */
     visibility: hidden;
-    /* 보이지는 않지만 여전히 있다. 그러나 더 낮은 layer에 있는 것을 클릭할 수 있도록 해준다.
-    아예 없애고 싶으면 Javascript가 필요하다. */
   }
 }
 
@@ -76,20 +71,12 @@
   background-color: #ffe810;
   height: 100vh;
   width: 100vw;
-  /* %는 부모의 크기에 맞추고 vh,vw는 화면의 크기에 맞춘다 */
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 60px;
   font-weight: 700;
   text-align: center;
-  /* animation: HideSplashScreen 1s ease-in-out; */
-  /* 애니메이션이 끝나면 from 상태로 돌아간다. */
-  /* animation: HideSplashScreen 1s ease-in-out infinite; */
-  /* 애니메이션이 무한 반복된다. */
   animation: HideSplashScreen 0.3s ease-in-out forwards;
-  /* 애니메이션이 to 상태를 기억하고 유지한다. */
   animation-delay: 1s;
-  /* 애니메이션의 시작을 딜레이할 수 있다. */
-  /* delay등의 설정은 사실 animation속에 한줄로 적을 수 있다. 근데 그렇게 하면 읽기 불편해서 이렇게 따로 적은 것이다. */
 }

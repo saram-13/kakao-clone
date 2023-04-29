@@ -7,9 +7,6 @@
   justify-content: space-between;
   align-items: center;
   padding: 50px 20px 15px 20px;
-  /* 위에 status-bar가 있기 때문에 위쪽 padding을 더 크게 준다. */
-  /* margin-top을 주면 margin-collapsing현상 때문에 말을 안듣는다. 부모와 border의 상부 또는 하부가 겹쳐있는 element는 그냥 padding을 쓰는게 정신건강에 이롭다. */
-  /* margin-collapsing : 부모와 자식의 boder의 상부 또는 하부가 겹쳐있을 경우 자식에게 margin-top,bottom을 줘도 부모가 margin을 가지게 되는 현상 */
   background-color: white;
   z-index: 4;
 }
@@ -24,27 +21,21 @@
   font-size: 20px;
   margin-left: 20px;
   position: relative;
-  /* find,more창에서 fa-gear위에 notification이 필요하기 때문에 relative를 부여했다 */
-  /* chats창에서도 아이콘 두개를 겹쳐야 된다 */
 }
 
 @keyframes RotateGear {
-  /* 애니메이션의 세부사항을 만들어주는 방법이다. 기본적인 애니메이션은 transform과 transition만으로도 만들 수 있다. */
   from {
     transform: none;
   }
   to {
     transform: rotateZ(360deg);
   }
-  /* Z축을 기준으로 360도 transform하는 애니메이션이다. */
 }
 
 .screen-header__icon .fa-gear:hover {
-  /* hover는 element state중 하나인데 해당 영역 안에 마우스가 올라오면 hover로 인식한다. */
   animation: RotateGear 3s linear infinite;
 }
 
-/* chat-screen에 필요한 것. 아이콘이 없어서 어거지로 아이콘 두개를 겹쳐서 만들었다. */
 .screen-header__icon .fa-plus {
   font-size: 12px;
   background-color: white;

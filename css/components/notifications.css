@@ -11,7 +11,6 @@
   }
   50% {
     transform: translateY(-0.5px);
-    /* Y축으로 이동 */
   }
   100% {
     transform: none;
@@ -30,7 +29,6 @@
   left: 18px;
   animation: NavNotification 1s ease-in-out infinite;
   animation-delay: 0.5s;
-  /* 바로 시작하면 페이지 이동할 떄 잠깐 멈칫할 때 얘 혼자만 움직여서 부자연스러워보임 */
 }
 
 .nav__notification--small {

@@ -56,7 +56,6 @@
 .user-component__name--small {
   font-size: 18px;
   font-weight: 400;
-  /* 400이 기본값이다 */
 }
 
 .user-component__column--small {
@@ -81,7 +80,6 @@
 .user-component__name--big {
   font-size: 18px;
   font-weight: 600;
-  /* 400이 기본값이다 */
 }
 
 .user-component__time {

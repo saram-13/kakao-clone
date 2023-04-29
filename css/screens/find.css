@@ -66,7 +66,6 @@
 
 .open-post__hashtags {
   text-transform: uppercase;
-  /* 겉으로 드러나는 것이 대문자가 되도록 한다. 실제로는 소문자다. */
   opacity: 0.5;
   margin-bottom: 4px;
 }
@@ -84,20 +83,17 @@
 }
 
 .open-post__member-count {
-  /* .open-post__members span:nth-of-type(1) */
   font-size: 16px;
   opacity: 0.4;
 }
 
 .open-post__divider {
-  /* .open-post__members span:nth-of-type(2) */
   font-size: 14px;
   margin: 0px 5px;
   opacity: 0.4;
 }
 
 .open-post__active {
-  /* .open-post__members span:nth-of-type(3) */
   color: #ff88d0;
   font-size: 14px;
 }
@@ -107,14 +103,12 @@
 }
 
 .open-post__main-photo {
-  /* open-post__column > img */
   width: 90px;
   height: 90px;
   border-radius: 5px;
 }
 
 .open-post__likes {
-  /* .open-post__column:last-child div */
   position: absolute;
   bottom: 5px;
   right: 5px;
@@ -128,13 +122,11 @@
 }
 
 .open-post__likes i {
-  /* .open-post__column:last-child div i */
   margin-top: 2px;
   font-size: 11px;
   margin-right: 4px;
 }
 
-/* Animista에서 가져옴 */
 @keyframes heartbeat {
   from {
     transform: scale(1);
@@ -163,14 +155,8 @@
 
 .open-post__likes:hover i {
   will-change: transform;
-  /* 브라우저에게 '이게 변할거야'라고 미리 알려주는 것. 컴퓨터는 GPU를 더 잘 사용하게 되어 애니메이션이 더 부드럽게 된다. */
   animation: heartbeat 1s ease-in-out infinite both;
 }
-
-/* 처음에 헷갈린 것. span:nth-child(2)는 실제 형제의 순서와 맞아야 한다.
-즉 여러 span 중에서 2번째 형재를 찾으라는 의미가 아니라
-부모의 형제들 중에서 2번째에 있으며 span인 놈을 찾으라는 의미다. */
-/* 그러나 여러 span들 중에서 n번째를 찾고 싶으면 nth-of-type(n)을 써야 한다. */
 
 .open-post:last-child {
   border: none;

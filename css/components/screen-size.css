@@ -23,17 +23,3 @@
     display: none;
   }
 }
-/* 위처럼 화면의 너비나 높이를 감지할 수도 있고
-아래처럼 스마트폰의 가로모드나 세로모드도 감지할 수 있다. */
-
-/* @media (orientation: landscape) {
-  body {
-    flex-direction: row;
-  }
-}
-
-@media (orientation: portrait) {
-  body {
-    flex-direction: column;
-  }
-} */

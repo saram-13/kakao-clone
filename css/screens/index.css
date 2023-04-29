@@ -4,13 +4,6 @@
   flex-direction: column;
   align-items: center;
   padding-top: 5px;
-  /* status-bar는 fixed되어 공간을 차지하지 않기 때문에 그만큼을 고려하여 padding을 줘야한다. */
-  /* sticky를 사용하면 공간을 차지하면서 fixed의 효과를 줄 수 있다. 즉 같은 layer에 있도록 할 수 있는 것 같다.
-  또한 sticky는 화면상 특정한 위치에 있는 것이 아니라 body의 특정한 위치에 머물도록 할 수 있기 때문에
-  sticky 속성을 가진 element들끼리 부딪히거나 밀어내는 효과를 만들 수도 있다. fixed는 내 화면상에 계속 머물도록 하고 싶을 때 사용하면 좋다.
-  즉 sticky는 더 광범위하게 사용할 수 있는 속성이다. */
-  /* margin을 주면 먹지 않는다. 아마도 margin collapsing현상으로 보인다. */
-  /* margin collapsing : 부모와 자식의 block의 상하 border이 겹칠 때 자식의 margin을 수정하여도 먹지 않는 현상 */
   margin-bottom: 60px;
   text-align: center;
 }
@@ -33,12 +26,10 @@
 }
 
 .login-form input {
-  /* .login-form input[type="text"] 등으로 더 정확히 가리킬 수도 있다. */
   padding: 16px 0px;
   border: none;
   font-size: 16px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.4);
-  /* transition: border-color 0.5s linear; */
 }
 
 .login-form input::placeholder {
@@ -50,7 +41,6 @@
 }
 
 .login-form input:last-child {
-  /* login-form__btn이라고 쓰면 font-size와 border이 적용 안된다. 오류가 있는 것같다.. */
   padding: 13px 0px;
   cursor: pointer;
   border-radius: 4px;
@@ -67,8 +57,6 @@
 /* Sign Up button */
 .sign-up-btn {
   width: 100%;
-  /* width 대신 sign-up-form에 flex를 주고 flex-direction을 column으로 적용한다면 width와 같은 효과를 줄 수 있으나
-  login-form처럼 여러 element가 있는 것이 아니기 때문에 간단히 width를 사용하는 것이 더 적절하다. */
   padding: 13px 0px;
   cursor: pointer;
   border-radius: 4px;
