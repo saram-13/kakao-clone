@@ -49,31 +49,34 @@
   border-color: var(--yellow);
 }
 
-.login-form__btn {
+.login-form input:last-child {
+  /* login-form__btn이라고 쓰면 font-size와 border이 적용 안된다. 오류가 있는 것같다.. */
   padding: 13px 0px;
   cursor: pointer;
   border-radius: 4px;
   margin-top: 30px;
   margin-bottom: 10px;
+  font-size: 15px;
   border: none;
 }
 
-.login-form__btn:focus {
+.login-form__btn:hover {
   background-color: var(--yellow);
 }
 
-/* Sign Up form */
-.sign-up-form__btn {
+/* Sign Up button */
+.sign-up-btn {
   width: 100%;
   /* width 대신 sign-up-form에 flex를 주고 flex-direction을 column으로 적용한다면 width와 같은 효과를 줄 수 있으나
   login-form처럼 여러 element가 있는 것이 아니기 때문에 간단히 width를 사용하는 것이 더 적절하다. */
   padding: 13px 0px;
   cursor: pointer;
   border-radius: 4px;
+  font-size: 15px;
   border: none;
 }
 
-.sign-up-form__btn:focus {
+.sign-up-btn:hover {
   background-color: var(--yellow);
 }
 
