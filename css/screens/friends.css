@@ -55,6 +55,7 @@
 
 /* 로딩(하는것 처럼 보이는)화면 */
 /* Animista라는 사이트에 가면 더 많은 애니메이션을 쓸 수 있다. */
+/* splashscreen */
 @keyframes HideSplashScreen {
   from {
     opacity: 1;
